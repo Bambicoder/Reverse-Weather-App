@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="preload" href="/home/anushka/Downloads/cold-background.jpg" as="image">
+    <link rel="preload" href="/home/anushka/Downloads/hot-background.jpg" as="image">
+    <link rel="preload" href="/home/anushka/Downloads/summer-background.jpg" as="image">
+    <link rel="stylesheet" type="text/css" href="forecast.css">
+</head>
+
+<body>
+  <div class="panel">
+    <main id="main">
+    </main>
+   </div>
+
+   <div class="input-section">
+    <form id="form">
+      <div class="form-container">
+        <input type="text" id="latitude" placeholder="Latitude" class="inputs" pattern="[-+]?([1-8]?\d(\.\d+)?|90(\.\d+)?)">
+        <input type="text" id="longitude" placeholder="Longitude" class="inputs" pattern="[-+]?(180(\.0+)?|(\d{1,2}|1[0-7]\d)(\.\d+)?)">
+      </div>
+      <div class="button-container">
+        <button type="submit" class="getWeather">Get Weather</button>
+      </div>
+      
+      <div class="date-time">
+
+      </div>
+    </form>
+  </div>
+
+    <script src="script.js" async></script>
+
+</body>
+</html>
+
+
+

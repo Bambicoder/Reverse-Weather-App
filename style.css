@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+     
+*{
+ 
+    box-sizing: border-box;
+}
+
+
+.cold {
+  object-fit: cover;
+  background-image: url('/home/anushka/Downloads/cold-background.jpg');
+  background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('/home/anushka/Downloads/cold-background.jpg');
+
+}
+
+.normal {
+  object-fit: cover;
+  background-image: url('/home/anushka/Downloads/summer-background.jpg');
+  background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('/home/anushka/Downloads/summer-background.jpg');
+
+}
+
+.hot {
+  object-fit: cover;
+  background-image: url('/home/anushka/Downloads/hot-background.jpg');
+  background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('/home/anushka/Downloads/hot-background.jpg');
+
+  
+}
+.cold,.hot,.normal{
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  
+}
+body.cold, body.normal, body.hot {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  transition: background-image 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  
+}
+
+
+.panel{
+  font-weight: bolder;
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: rgba(110,110,110,0.3);
+  box-shadow: 0 8px 32px 0
+  rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255, 255, 0.18);
+  z-index : 1;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 3em;
+  
+  overflow-x: hidden;
+
+}
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("/home/anushka/Downloads/pexels-johannes-plenio-1118873.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    transition: background-image 0.5s ease-in-out;
+
+}
+.inputs{
+  width: 12rem;
+  height: 3rem;
+    padding: 1rem;
+    margin-right: 4rem;
+    border-radius: 2rem;
+    border:none;
+    font-family: inherit;
+    margin: 0 10px 0 0;
+    min-width: 3rem;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: rgba(110,110,110,0.5);
+    font-weight:bolder;
+  
+
+}
+button {
+  margin-top: 1rem;
+  z-index: 2;
+  margin-left: 20px;
+      height: 3rem;
+      width: 6rem;
+      border-radius: 30px;
+      background: rgba(110,110,110,0.7);
+      box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
+      border: none;
+      cursor: pointer;
+      transition-duration: 0.4s;
+
+      }
+
+.weather{
+    text-align: center;
+    font-size: 2rem;
+}
+.weather h2 {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+} 
+
+.input-section{
+position: absolute;
+  top:10%;
+  left: 5%;
+}
+.content-gap{
+margin-left: 10rem;
+
+}
+.location{
+margin-bottom: 20rem;
+}
+.date-time {
+position: fixed;
+left: 2%;
+bottom: -5%;
+padding: 1rem;
+font-size: 4rem;
+font-weight: bold;
+color: white;
+font-family: 'Poppins', sans-serif;
+max-width: 90vw;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.main{
+    display: flex;
+flex-wrap: wrap;
+}
+
+#temperature,#wind-speed,#cloud-cover{
+    flex: 1 1 50%;
+   padding: 10px;
+
+}
+  #latitude{
+    margin-bottom: 0.7rem;
+  }
+  #time{
+   
+    font-size: 2.8rem;
+  }
+
+@media screen and (max-width: 480px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .form-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+    
+  .panel{
+    width:43% !important;
+    overflow-x: hidden;
+    padding-left: 0.9rem !important;
+
+  }
+  .date-time {
+    font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 0.7rem;
+    bottom: 5%;
+    
+}
+#time{
+  font-size: 1.3rem !important;
+}
+  
+ 
+  .location{
+    margin-bottom: 17rem !important;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 481px) and (max-width: 640px) {
+  img {
+    max-width: 100%;
+    height: auto;
+    
+  }
+  .form-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .panel{
+    width:45%;
+  }
+ 
+
+}
+/*medium screens*/
+@media screen and (min-width: 481px) and (max-width: 749px){
+  .date-time {
+    font-size: 2.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding: 0.7rem;
+    bottom: -2%;
+    
+}
+
+#time{
+  font-size: 1.7rem !important;
+}
+
+}
+
+/* Large screens */
+@media screen and (min-width: 769px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
